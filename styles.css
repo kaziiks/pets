@@ -1,0 +1,253 @@
+/* Pamatstils */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header stils */
+.custom-header {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Lielāks augstums, lai galvenais saturs ir izcils */
+    background: #a1c4fd; /* Gaišas, mierīgas debess krāsas tonis */
+    background-image: url('path/to/your/image.jpg'); /* Pievieno fona attēlu (pārbaudiet attēla ceļu) */
+    background-size: cover; /* Attēls pārklāj visu fona laukumu */
+    background-position: center; /* Attēls ir centrēts */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 4px solid #ff7f50; /* Neliels apakšējais ierobežojums, kas piešķir stilīgumu */
+}
+
+.header-container {
+    background: rgba(0, 0, 0, 0.6); /* Tumšs fons, lai teksts ir viegli lasāms */
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ēna ap konteineru, lai tas izceltos */
+}
+
+h1 {
+    font-family: 'Merriweather', serif; /* Elegants serif fonts, lai piešķirtu vieglu klasiskumu */
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Maiga ēna virsrakstam */
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: justify; /* Teksta izlīdzināšana, lai tas būtu labi strukturēts */
+}
+
+/* Animācijas efekts */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pielāgošana mobilajām ierīcēm */
+@media (max-width: 768px) {
+    .custom-header {
+        height: 50vh; /* Mazāks augstums mazajos ekrānos */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Mazāks virsraksts */
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.5em;
+}
+
+/* Iemeslu sekcija */
+#reasons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.reason-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.reason {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.reason:hover {
+    transform: translateY(-5px);
+}
+
+.reason-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.reason h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.reason p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Pielāgot lieliem ekrāniem */
+@media (min-width: 1024px) {
+    .reason {
+        width: 30%;
+    }
+}
+
+/* Pielāgot vidējiem ekrāniem */
+@media (max-width: 1023px) {
+    .reason {
+        width: 45%;
+    }
+}
+
+/* Pielāgot maziem ekrāniem */
+@media (max-width: 600px) {
+    .reason {
+        width: 100%;
+    }
+}
+
+
+/* Accordion struktūra */
+.accordion-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #0056b3;
+}
+
+.accordion-content {
+    padding: 10px;
+    background-color: #f9f9f9;
+    display: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+/* Accordion funkcionalitāte */
+.accordion-button.active + .accordion-content {
+    display: block;
+}
+
+.accordion-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Pielāgojumi mobilajām ierīcēm */
+@media (max-width: 768px) {
+    .accordion-button {
+        font-size: 1em;
+        padding: 12px;
+    }
+    .accordion-content {
+        font-size: 0.95em;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+#puzzle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 500px;
+    margin: 20px auto;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.drop-area {
+    width: 320px;
+    height: 320px;
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    position: relative;
+}
+
+.result-container {
+    text-align: center;
+    margin-top: 20px;
+}
